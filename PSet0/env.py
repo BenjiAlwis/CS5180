@@ -84,9 +84,7 @@ class ApartmentEnv(gym.Env):
         return obs, info
 
     def step(self, action: int):
-        assert not self._terminated, "Call reset() before stepping a terminated episode."
-        assert self.action_space.contains(action), f"Invalid action {action}"
-
+        
         t = self._t
         u = self._true_quality
 
@@ -128,7 +126,6 @@ class ApartmentEnv(gym.Env):
     # ------------------------------------------------------------------
 
     def _make_obs(self, terminal: bool = False):
-        """Build the observation dict, adding noise to quality if requested."""
         if terminal:
             return {
                 "t": 0,
