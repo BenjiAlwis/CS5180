@@ -7,7 +7,7 @@ State  : (t, U_t)  — current week and apartment quality.
 Action : 0 = reject,  1 = accept
 Reward : U_t on accept, 0 on reject, 0 on fallback (rejected everything).
 
-With noise_std > 0 the *observation* of quality is U_t + N(0, sigma^2),
+With noise_std > 0 the observation of quality is U_t + N(0, sigma^2),
 but the reward is always the true U_t.
 """
 

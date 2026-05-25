@@ -69,12 +69,12 @@ class OptimalPolicy:
         t=3: threshold = 3    (accept u in {3,4})
         t=4: threshold = 1    (always accept — last chance)
 
-    In the noisy setting the agent compares the *observed* quality to
+    In the noisy setting the agent compares the observed quality to
     the threshold, since the true quality is hidden.  This means the
     policy can make errors when noise is large.
 
     Lookup table: _TABLE[(t, u_true)] -> action  (noiseless case).
-    In the noisy path we threshold on the observed quality.
+    In the noisy path threshold on the observed quality.
     """
 
     # Thresholds derived from W_{t+1} values:
